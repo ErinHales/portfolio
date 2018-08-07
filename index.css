@@ -1,0 +1,225 @@
+/* light green/gray = B8D8D8
+medium green/gray = 7A9E9F
+dark green/gray = 4F6367
+cream = EEF5DB
+coral = FE5F55 
+right coral = F4B196
+dark blue = 076982*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+body {
+    scroll-y: hidden;
+}
+
+p {
+    text-indent: 30px;
+    margin-bottom: 20px;
+}
+
+.homePageImg {
+    height: 100vh;
+    margin: 0px;
+    position: fixed;
+    width: 100vw;
+    z-index: -2;
+}
+
+.nav {
+    position: fixed;
+    top: 0px;
+    color: white;
+    font-family: "Josephin Sans", sans-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: rgba(244,177,150,0);
+    z-index: 1;
+}
+
+.showNav {
+    --ease: all 1000ms ease;
+    background-color: white;
+    transition: var(--ease);
+    background-color: rgba(244,177,150,1);
+}
+
+.nav > h3,
+.navButtons > h3 {
+    display: inline-block;
+    padding: 15px;
+}
+
+.navButtons > h3 {
+    cursor: pointer;
+    transition: transform .3s linear;
+}
+
+.navButtons {
+    padding-right: 30px;
+}
+
+.home {
+    background-color: rgba(255,255,255,0.5);
+    position: absolute;
+    top: 37vh;
+    width: 97vw;
+    padding: 30px;
+}
+
+.home h1 {
+    font-size: 80px;
+    text-align: center;
+}
+
+.home h3 {
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+.navButtons > h3:active {
+    border-bottom: 4px solid #F4B196;
+}
+
+.navButtons > h3:hover {
+    transform: scale(1.07);
+}
+
+.down {
+    position: absolute;
+    margin-left: calc(50vw - 25px);
+    width: 50px;
+    top: 87vh;
+    text-align: center;
+    animation: bounce 2s infinite;
+}
+
+.about {
+    background-color: rgba(255,255,255,0.5);
+    position: absolute;
+    top: 100vh;
+}
+
+.blogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 99vw;
+}
+
+.blogs > div {
+    width: 200px;
+    height: 200px;
+    font-size: 30px;
+    background-color: #076982;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    transition: transform .5s linear;
+    margin: 20px;
+}
+
+.blogs > div:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+}
+
+.blogs img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.journey {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #076982;
+    transition: opacity 500ms ease-in-out;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.2);
+    padding: 40px;
+    margin: 50px;
+}
+
+.circle img {
+    width: 100px;
+}
+
+.content {
+    width: 60%;
+}
+
+.hide {
+    display: none;
+    opacity: 0;
+}
+
+.display {
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    opacity: 1;
+}
+
+.back {
+    background-color: #044252;
+    border-radius: 30px;
+    border: none;
+    margin: 20px;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+}
+
+.skills {
+    background-color: #F4B196;
+}
+
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills div {
+    padding: 60px;
+    text-align: center;
+}
+
+.skills h3 {
+    font-size: 30px;
+    margin: 20px;
+    /* text-shadow: 2px 2px rgba(0,0,0,0.5); */
+}
+
+.skills h2 {
+    font-size: 40px;
+    padding: 20px;
+    padding-top: 90px;
+    text-align: center;
+}
+
+.skills img {
+    width: 50px;
+}
+
+
+
+@keyframes bounce {
+    70% {
+        transform: translateY(20px);
+    } 100% {
+        transform: translateY(0px);
+    }
+}
