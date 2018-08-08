@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- <script src="/path/to/parallax.js"></script> -->
     <script src="./index.js"></script>
@@ -19,6 +21,7 @@
         <div class="nav">
             <h3>Erin</h3>
             <div class="navButtons">
+                <img src="http://i65.tinypic.com/2d7widc.jpg" alt="">
                 <h3>home</h3>
                 <h3>about</h3>
                 <h3>skills</h3>
@@ -27,24 +30,30 @@
             </div>
         </div>
         <div class="home">
-            <h1>Erin Hales</h1>
-            <h3>Web Developer</h3>
+            <div class="left">
+                <div class="right">
+                    <div class="center">
+                        <h1>Erin Hales</h1>
+                        <h3>Web Developer</h3>
+                    </div>
+                </div>
+            </div>
         </div>
         <img class="down" src="http://i64.tinypic.com/1rcb2q.jpg" alt="">
     </div>
     <div class="about">
         <!-- <img src="http://i67.tinypic.com/1o0upf.jpg" alt=""> -->
         <div class="blogs">
-            <div class="aboutMe">
+            <div onclick="showAbout()">
                 <img src="http://i67.tinypic.com/2cekeab.jpg" alt="About Me" />
                 <h2>About Me</h2>
             </div>
-            <div class="myJourney" onclick="show()">
+            <div onclick="show()">
                 <img src="http://i65.tinypic.com/t7l7gz.jpg" alt="Web Development" />
                 <h2>My Journey
                     <br/> to Web Development</h2>
             </div>
-            <div>
+            <div onClick="showWork()">
                 <img src="http://i64.tinypic.com/s5cz1c.jpg" alt="work" />
                 <h2>Work Experience</h2>
             </div>
@@ -90,6 +99,46 @@
                 </div>
             </div>
         </div>
+        <h2 class="projectsHeader">Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="http://i65.tinypic.com/1sh5ip.jpg" alt="">
+                <p>Ozzy is a parenting application designed to help parents and care providers connect and communicate. It was
+                    designed as a personal project during my time at Dev Mountain. It is one of my larger projects and won
+                    the award for "Best Overall App".</p>
+                <button>Read More
+                    <i class="fas fa-angle-double-right"></i>
+                </button>
+            </div>
+            <div class="project">
+                <img src="http://i63.tinypic.com/iqvj49.jpg" alt="">
+                <p>This is a calendar application also built during Dev Mountain. It was a very technical piece. Because of
+                    the way we measure time, I had to create a lot of algorithms to display the dates correctly and to make
+                    events show up in the right spot.</p>
+                <button>Read More
+                    <i class="fas fa-angle-double-right"></i>
+                </button>
+            </div>
+            <div class="project">
+                <img src="http://i63.tinypic.com/bfnxv4.jpg" alt="">
+                <p>This weather app was built as part of the Free Code Camp curriculum. I built it on my own after 2 months
+                    of studying code in my free time. It uses the Open Weather API and gives the current weather as well
+                    as a three day forecast.</p>
+                <button>Read More
+                    <i class="fas fa-angle-double-right"></i>
+                </button>
+            </div>
+        </div>
+        <form class="contact">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Subject">
+            <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+            <div>
+                <button>Clear</button>
+                <button>Send</button>
+            </div>
+        </form>
         <div class="journey hide">
             <div class="circle">
                 <img src="http://i65.tinypic.com/t7l7gz.jpg" alt="Web Development" />
@@ -110,6 +159,29 @@
                     won 'Best Overall' award on my parenting app, Ozzy.</p>
             </div>
             <button class="back" onclick="hide()">Back</button>
+        </div>
+        <div class="aboutMePage hide">
+            <div class="circle">
+                <img src="http://i67.tinypic.com/2cekeab.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>alksdfa;lsdgh;agoasijfaso;idfja;slkdfj;laskjdf;lasjdfl;kasdjfs dfk jsoiajf;asdjf;lkasjdf dsflf;iasjdf;oisjdflksdjf
+                    sdfljas s ;s laksj sd las klsd fkasldjf aslkd ;alsdkfj aslkdjf </p>
+            </div>
+            <button class="back" onclick="hideAbout()">Back</button>
+        </div>
+        <div class="workPage hide">
+            <div class="circle">
+                <img src="http://i64.tinypic.com/s5cz1c.jpg" alt="">
+            </div>
+            <div class="content">
+                <p>alksdfa;lsdgh;agoasijfaso;idfja;slkdfj;laskjdf;lasjdfl;kasdjfs dfk jsoiajf;asdjf;lkasjdf dsflf;iasjdf;oisjdflksdjf
+                    sdfljas s ;s laksj sd las klsd fkasldjf aslkd ;alsdkfj aslkdjfl;askjfa ;asdkf as f;sfl aslk;f flas fl;l;as
+                    fasd f;alksdfj a;ls f f f;lkasd f sdfl; sflk asdfl ;lf ;af adf af asdf as; f asfdas df;ls fkls fkls f
+                    sf s;dfkl sdf asdf as df;lkasj fasdf s df sdf ;sadlkf ;lskdf k sf asd flk;dsaf ;laksdjfl aksdf;lk sdf
+                    jals;kd fj;sf sfk as f sdfj sfkl; jas </p>
+            </div>
+            <button class="back" onclick="hideWork()">Back</button>
         </div>
     </div>
 </body>

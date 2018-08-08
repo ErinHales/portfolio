@@ -61,11 +61,33 @@ p {
 }
 
 .home {
-    background-color: rgba(255,255,255,0.5);
     position: absolute;
-    top: 37vh;
-    width: 97vw;
-    padding: 30px;
+    top: 35vh;
+    width: 30%;
+    left: 35%;
+}
+
+.home .left {
+    border: 2px solid #044252;
+    position: relative;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+}
+
+.home .right {
+    width: 100%;
+    height: 100%;
+    top: 29%;
+    left: 39%;
+    border: 2px solid #044252;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.home .center {
+    margin: 40px;
 }
 
 .home h1 {
@@ -85,6 +107,12 @@ p {
 
 .navButtons > h3:hover {
     transform: scale(1.07);
+}
+
+.navButtons img {
+    display: none;
+    height: 50px;
+    margin: 10px;
 }
 
 .down {
@@ -112,15 +140,15 @@ p {
 }
 
 .blogs > div {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     font-size: 30px;
     background-color: #076982;
     color: white;
     padding: 50px;
     text-align: center;
     transition: transform .5s linear;
-    margin: 20px;
+    margin: 100px;
 }
 
 .blogs > div:hover {
@@ -129,11 +157,13 @@ p {
 }
 
 .blogs img {
-    width: 100px;
+    width: 200px;
     margin-bottom: 20px;
 }
 
-.journey {
+.journey,
+.aboutMePage,
+.workPage {
     width: 100vw;
     height: 100vh;
     color: white;
@@ -141,6 +171,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #076982;
     transition: opacity 500ms ease-in-out;
 }
@@ -149,7 +180,7 @@ p {
     border-radius: 50%;
     background-color: rgba(255,255,255,0.2);
     padding: 40px;
-    margin: 50px;
+    margin-bottom: 50px;
 }
 
 .circle img {
@@ -184,12 +215,16 @@ p {
 
 .skills {
     background-color: #F4B196;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .skillsContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: 1200px;
 }
 
 .skills div {
@@ -214,6 +249,84 @@ p {
     width: 50px;
 }
 
+.projects {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+
+.project {
+    /* background-color: #076982; */
+    background-color: rgba(255,255,255,0.5);
+    /* color: white; */
+    color: #044252;
+    margin: 50px;
+    padding: 20px;
+    width: 400px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.project button {
+    background-color: #044252;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 10px;
+}
+
+.project p {
+    margin-top: 10px;
+}
+
+.project img {
+    width: 80%;
+}
+
+form {
+    background-color: rgba(255,255,255,0.5);
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+form input {
+    width: 60%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid gray;
+    margin: 20px;
+    font-size: 50px;
+}
+
+textarea {
+    width: 60%;
+    background-color: transparent;
+    font-size: 30px;
+}
+
+form button {
+    background-color: #044252;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.projectsHeader {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 100px;
+}
+
 
 
 @keyframes bounce {
@@ -221,5 +334,80 @@ p {
         transform: translateY(20px);
     } 100% {
         transform: translateY(0px);
+    }
+}
+
+
+
+
+
+@media (max-width: 1300px) {
+    .blogs div {
+        width: 200px;
+        height: 200px;
+        margin: 100px 50px 100px 50px;
+    }
+    .blogs img {
+        width: 100px;
+    }
+    .home {
+        width: 40%;
+        left: 30%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .skillsContainer {
+        width: 100%;
+    }
+    .home {
+        width: 50%;
+        left: 25%;
+    }
+    .content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    .skills h3 {
+        margin: 10px;
+    }
+    form {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+    textarea {
+        height: 300px;
+    }
+    form input {
+        font-size: 30px;
+    }
+    .home {
+        width: 80%;
+        left: 10%;
+        top: 25vh;
+    }
+    .navButtons h3 {
+        display: none;
+    }
+    .navButtons img {
+        display: block;
+    }
+    .content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 540px) {
+    .home {
+        top: 25vh;
+    }
+    .skillsContainer {
+        flex-direction: column;
+    }
+    .project {
+        width: 300px;
     }
 }

@@ -1,11 +1,27 @@
 // $('.parallax-window').parallax({ imageSrc: '/path/to/image.jpg' });
 
-function show() {
+function show(val) {
     $('.journey').removeClass("hide").addClass("display");
 }
 
 function hide() {
     $('.journey').removeClass("display").addClass("hide");
+}
+
+function showAbout() {
+    $('.aboutMePage').removeClass("hide").addClass("display");
+}
+
+function hideAbout() {
+    $('.aboutMePage').removeClass("display").addClass("hide");
+}
+
+function showWork() {
+    $('.workPage').removeClass("hide").addClass("display");
+}
+
+function hideWork() {
+    $('.workPage').removeClass("display").addClass("hide");
 }
 
 let scrollpos = window.scrollY
